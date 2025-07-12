@@ -11,6 +11,9 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <!-- Custom Theme CSS -->
   <link rel="stylesheet" href="theme.css" />
   
@@ -30,7 +33,7 @@
       }
     }
 
-    /* Style for hero section text */
+    /* Style for hero section typing text with animated underline */
     #typing-text {
       font-family: 'Open Sans', sans-serif;
       font-size: 1.25rem;
@@ -41,12 +44,47 @@
       overflow: hidden;
       border-right: none;
     }
+
+    #typed-line {
+      border-bottom: 2px solid #4169E1; /* Royal Blue underline */
+      display: inline-block;
+      padding-bottom: 4px;
+      animation: underline-grow 0.5s ease forwards;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    @keyframes underline-grow {
+      to {
+        width: 100%;
+      }
+    }
+
+    /* LinkedIn & Scholar icons container */
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-left: 1rem;
+    }
+
+    .social-icons a svg {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover svg {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container">
+    <div class="container d-flex align-items-center">
       <a class="navbar-brand fw-bold" href="index.html">Sankhadip Saha</a>
       <button
         class="navbar-toggler"
@@ -68,13 +106,30 @@
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
         </ul>
       </div>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v12h-4V8zm7 0h3.6v1.71h.05c.5-.95 1.73-1.95 3.56-1.95 3.81 0 4.52 2.5 4.52 5.75V20h-4v-5.5c0-1.3-.02-3-1.83-3-1.84 0-2.12 1.43-2.12 2.9V20h-4V8z"/>
+          </svg>
+        </a>
+
+        <!-- Google Scholar -->
+        <a href="https://scholar.google.com/citations?user=your-google-scholar-id" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+          <svg fill="#4285F4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <header class="container text-center py-5">
     <h1 class="display-4 fw-bold">Sankhadip Saha</h1>
-    <div id="typing-text"></div>
+    <div id="typing-text"><span id="typed-line"></span><span class="typing-cursor"></span></div>
     <p>Crafting Matter | Enabling Energy | Exploring Structure</p>
     <a href="cv.html" class="btn btn-primary">View My CV</a>
   </header>
@@ -117,28 +172,31 @@
       "Operando Techniques Explorer"
     ];
 
-    const typingText = document.getElementById('typing-text');
+    const typedLine = document.getElementById('typed-line');
     const typingSpeed = 100; // ms per character
     const erasingSpeed = 50; // ms per character
     const delayBetweenLines = 1500; // pause before erase
 
     let lineIndex = 0;
     let charIndex = 0;
-    let typing = true;
 
     function typeLine() {
       if (charIndex < lines[lineIndex].length) {
-        typingText.textContent += lines[lineIndex].charAt(charIndex);
+        typedLine.textContent += lines[lineIndex].charAt(charIndex);
         charIndex++;
         setTimeout(typeLine, typingSpeed);
       } else {
+        typedLine.style.animation = 'none'; // reset underline animation
+        typedLine.offsetHeight; // trigger reflow
+        typedLine.style.animation = null;
+
         setTimeout(eraseLine, delayBetweenLines);
       }
     }
 
     function eraseLine() {
       if (charIndex > 0) {
-        typingText.textContent = lines[lineIndex].substring(0, charIndex - 1);
+        typedLine.textContent = lines[lineIndex].substring(0, charIndex - 1);
         charIndex--;
         setTimeout(eraseLine, erasingSpeed);
       } else {
@@ -147,7 +205,6 @@
       }
     }
 
-    // Start animation
     document.addEventListener('DOMContentLoaded', () => {
       typeLine();
     });
