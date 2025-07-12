@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sankhadip's Materials Atlier</title>
+  <title>Sankhadip's Materials Atelier</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -15,10 +15,13 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
     /* Typing Effect Styles */
     #typing-text {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: #4169E1; /* Royal Blue */
       min-height: 2em;
       margin-bottom: 1rem;
@@ -29,7 +32,7 @@
     }
 
     #typed-line {
-      border-bottom: 2px solid #4169E1; /* Royal Blue underline */
+      border-bottom: 2px solid #4169E1;
       display: inline-block;
       padding-bottom: 4px;
       white-space: nowrap;
@@ -42,7 +45,7 @@
       animation: blink 0.8s steps(2, start) infinite;
       vertical-align: bottom;
       margin-left: 3px;
-      height: 1.25rem;
+      height: 1.5rem;
     }
 
     @keyframes blink {
@@ -50,16 +53,31 @@
         border-color: transparent;
       }
     }
+
+    .social-icons a {
+      margin: 0 0.3rem;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      font-size: 0.9rem;
+      color: #555;
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container d-flex align-items-center">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html" style="gap: 0.5rem;">
-        Sankhadip's Materials Atlier
+      <a class="navbar-brand fw-bold" href="index.html">
+        Sankhadip's Materials Atelier
       </a>
-
       <button
         class="navbar-toggler"
         type="button"
@@ -74,7 +92,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
@@ -86,24 +104,22 @@
   <!-- Hero Section -->
   <header class="container text-center py-5">
     <h1 class="display-4 fw-bold">Sankhadip Saha</h1>
-    <!-- Social Icons next to name -->
-        <span class="d-flex align-items-center" style="gap: 0.5rem; margin-left: 0.5rem;">
-          <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/sankhadip-saha/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display:inline-block;">
-            <svg fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v12h-4V8zm7 0h3.6v1.71h.05c.5-.95 1.73-1.95 3.56-1.95 3.81 0 4.52 2.5 4.52 5.75V20h-4v-5.5c0-1.3-.02-3-1.83-3-1.84 0-2.12 1.43-2.12 2.9V20h-4V8z"/>
-            </svg>
-          </a>
-
-          <!-- Google Scholar -->
-          <a href="https://scholar.google.com.au/citations?user=5LF7NuQAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="display:inline-block;">
-            <svg fill="#4285F4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-              <path d="M19 3H5c-1.1 0-2 .9-2 2v14l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
-            </svg>
-          </a>
-        </span>
+    <div class="social-icons mb-3">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/sankhadip-saha/" target="_blank" aria-label="LinkedIn">
+        <svg fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v12h-4V8zm7 0h3.6v1.71h.05c.5-.95 1.73-1.95 3.56-1.95 3.81 0 4.52 2.5 4.52 5.75V20h-4v-5.5c0-1.3-.02-3-1.83-3-1.84 0-2.12 1.43-2.12 2.9V20h-4V8z"/>
+        </svg>
+      </a>
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com.au/citations?user=5LF7NuQAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar">
+        <svg fill="#4285F4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+        </svg>
+      </a>
+    </div>
     <div id="typing-text"><span id="typed-line"></span><span class="typing-cursor"></span></div>
-    <p>Crafting Matter | Enabling Energy | Exploring Structure</p>
+    <p class="mt-3">Crafting Matter | Enabling Energy | Exploring Structure</p>
     <a href="cv.html" class="btn btn-primary">View My CV</a>
   </header>
 
