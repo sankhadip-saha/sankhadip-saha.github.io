@@ -1,7 +1,14 @@
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
 }
+
+h1, h2, h3, nav, .navbar-brand, .nav-link, footer {
+  font-family: 'Open Sans', sans-serif;
+}
+
 
 .hero {
   background: #f8f9fa;
