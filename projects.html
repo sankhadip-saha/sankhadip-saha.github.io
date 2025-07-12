@@ -2,38 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Sankhadip Saha</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Sankhadip Saha</a>
-      <div class="collapse navbar-collapse">
+      <a class="navbar-brand fw-bold" href="index.html">Sankhadip Saha</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cv.html">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="projects.html">Projects</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <main class="container my-5">
-    <h2>Projects</h2>
-    <p>Here are some of my recent research projects:</p>
-    <ul>
-      <li>Project 1: Title and short description</li>
-      <li>Project 2: Title and short description</li>
-    </ul>
+    <h2 class="text-center mb-4">Projects</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Aqueous Zinc-Ion Battery Cathodes</h5>
+            <p class="card-text">
+              Researching cathode materials for aqueous zinc-ion batteries focusing on operando characterization and electrochemical stability.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Operando Battery Techniques</h5>
+            <p class="card-text">
+              Developing advanced in-situ experimental methods to monitor battery behavior during charge/discharge cycles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more project cards as needed -->
+    </div>
   </main>
 
-  <footer class="text-center py-4">
+  <footer>
     &copy; 2025 Sankhadip Saha
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
