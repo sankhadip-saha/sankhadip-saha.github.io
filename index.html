@@ -2,239 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sankhadip's Materials Atelier</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Bootstrap CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Sankhadip Saha</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    /* Social icons positioned top right of hero section */
-    .hero-social {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-    }
-
-    .hero-social a {
-      margin-left: 0.5rem;
-      display: inline-block;
-      transition: transform 0.2s;
-    }
-
-    .hero-social a:hover {
-      transform: scale(1.2);
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      padding: 5rem 1rem;
-    }
-
-    .hero h1 {
-      font-family: 'Merriweather', serif;
-    }
-
-    /* Typing effect */
-    #typing-text {
-      font-size: 1.5rem;
-      color: #4169E1;
-      white-space: nowrap;
-      overflow: hidden;
-      display: inline-flex;
-      align-items: center;
-      margin-top: 1rem;
-    }
-
-    #typed-line {
-      border-bottom: 2px solid #4169E1;
-      display: inline-block;
-      padding-bottom: 4px;
-    }
-
-    .typing-cursor {
-      display: inline-block;
-      border-right: 3px solid #4169E1;
-      animation: blink 0.8s steps(2, start) infinite;
-      margin-left: 3px;
-      height: 1.5rem;
-    }
-
-    @keyframes blink {
-      to {
-        border-color: transparent;
-      }
-    }
-
-    footer {
-      border-top: 1px solid #ccc;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    @media (max-width: 576px) {
-      .hero-social {
-        top: 15px;
-        right: 15px;
-      }
-    }
-  </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">
-        Sankhadip's Materials Atelier
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <a class="navbar-brand" href="index.html">Sankhadip Saha</a>
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero text-center position-relative">
-    <h1 class="display-4 fw-bold mb-0">Sankhadip Saha</h1>
-
-    <!-- Social icons top right -->
-    <div class="hero-social">
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/sankhadip-saha/" target="_blank" aria-label="LinkedIn">
-        <svg fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24" width="24" height="24">
-          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v12h-4V8zm7 0h3.6v1.71h.05c.5-.95 1.73-1.95 3.56-1.95 3.81 0 4.52 2.5 4.52 5.75V20h-4v-5.5c0-1.3-.02-3-1.83-3-1.84 0-2.12 1.43-2.12 2.9V20h-4V8z"/>
-        </svg>
-      </a>
-      <!-- Google Scholar -->
-      <a href="https://scholar.google.com.au/citations?user=5LF7NuQAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar">
-        <svg fill="#4285F4" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24" width="24" height="24">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
-        </svg>
-      </a>
+  <header class="hero text-center">
+    <div class="container">
+      <img src="profile.jpg" alt="Profile photo" class="profile-img" />
+      <h1>Sankhadip Saha</h1>
+      <p>PhD Researcher | Energy Storage Materials</p>
     </div>
-
-    <!-- Typing title under name -->
-    <div id="typing-text">
-      <span id="typed-line"></span><span class="typing-cursor"></span>
-    </div>
-
-    <p class="mt-3">Crafting Matter | Enabling Energy | Exploring Structure</p>
-    <a href="cv.html" class="btn btn-primary">View My CV</a>
   </header>
 
-  <!-- Highlights -->
-  <section class="container text-center my-5">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <h5>About</h5>
-        <p>Learn more about my background and research interests.</p>
-        <a href="about.html" class="btn btn-outline-primary">About Me</a>
-      </div>
-      <div class="col-md-4">
-        <h5>CV</h5>
-        <p>See my academic journey and publications.</p>
-        <a href="cv.html" class="btn btn-outline-primary">View CV</a>
-      </div>
-      <div class="col-md-4">
-        <h5>Projects</h5>
-        <p>Explore my ongoing projects in materials science.</p>
-        <a href="projects.html" class="btn btn-outline-primary">My Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-3">
+  <footer class="text-center py-4">
     &copy; 2025 Sankhadip Saha
   </footer>
-
-  <!-- Bootstrap Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Typing Script -->
-  <script>
-    const lines = [
-      "PhD Researcher",
-      "Materials Scientist",
-      "Energy Storage Enthusiast",
-      "Operando Techniques Explorer"
-    ];
-
-    const typedLine = document.getElementById('typed-line');
-    const cursor = document.querySelector('.typing-cursor');
-    const typingSpeed = 100;
-    const erasingSpeed = 50;
-    const delayBetweenLines = 1500;
-
-    let lineIndex = 0;
-    let charIndex = 0;
-
-    function updateUnderlineWidth() {
-      const span = document.createElement('span');
-      span.style.visibility = 'hidden';
-      span.style.position = 'absolute';
-      span.style.whiteSpace = 'nowrap';
-      span.style.fontFamily = window.getComputedStyle(typedLine).fontFamily;
-      span.style.fontSize = window.getComputedStyle(typedLine).fontSize;
-      span.textContent = typedLine.textContent;
-      document.body.appendChild(span);
-      const width = span.offsetWidth;
-      document.body.removeChild(span);
-      typedLine.style.width = width + 'px';
-    }
-
-    function typeLine() {
-      if (charIndex < lines[lineIndex].length) {
-        typedLine.textContent += lines[lineIndex].charAt(charIndex);
-        charIndex++;
-        updateUnderlineWidth();
-        setTimeout(typeLine, typingSpeed);
-      } else {
-        setTimeout(eraseLine, delayBetweenLines);
-      }
-    }
-
-    function eraseLine() {
-      if (charIndex > 0) {
-        typedLine.textContent = lines[lineIndex].substring(0, charIndex - 1);
-        charIndex--;
-        updateUnderlineWidth();
-        setTimeout(eraseLine, erasingSpeed);
-      } else {
-        lineIndex = (lineIndex + 1) % lines.length;
-        setTimeout(typeLine, typingSpeed);
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      typedLine.style.width = '0px';
-      cursor.style.display = 'inline-block';
-      typeLine();
-    });
-  </script>
 </body>
 </html>
